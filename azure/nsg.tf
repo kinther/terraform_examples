@@ -20,7 +20,7 @@ resource "azurerm_network_security_group" "example_nsg" {
         priority                    = 110
         direction                   = "Outbound"
         access                      = "Allow"
-        protocol                    = "UDP"
+        protocol                    = "Udp"
         source_port_range           = "*"
         destination_port_range      = "53"
         source_address_prefix       = "172.31.255.0/24"
