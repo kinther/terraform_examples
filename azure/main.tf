@@ -9,7 +9,7 @@ terraform {
       version = "~> 3.0.2"
 
     }
-    
+
   }
 
   required_version = ">= 1.1.0"
@@ -19,16 +19,5 @@ terraform {
 provider "azurerm" {
 
   features {}
-
-}
-
-resource "azurerm_resource_group" "rg" {
-  name     = "myTFResourceGroup"
-  location = "westus2"
-
-  tags = {
-    Environment = "Terraform Getting Started"
-    Team = "DevOps"
-  }
 
 }
