@@ -1,2 +1,4 @@
 aws/.terraform*
 aws/terraform*
+azure/.terraform*
+azure/terraform*
