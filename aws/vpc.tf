@@ -28,7 +28,7 @@ resource "aws_subnet" "secondary" {
 
 resource "aws_subnet" "tertiary" {
     vpc_id            = aws_vpc.main.id
-    cidr_block        = "192.168.100.128/25"
+    cidr_block        = "192.168.100.128/26"
     availability_zone = "us-west-2c"
 
     tags = {
@@ -36,11 +36,12 @@ resource "aws_subnet" "tertiary" {
     }
 }
 
-resource "aws_nat_gateway" "NATGateway" {
-    allocation_id = aws.eip.appservergateway.id
-    subnet_id     = aws_subnet.main.id
+resource "aws_subnet" "public" {
+    vpc_id            = aws_vpc.main.id
+    cidr_block        = "192.168.100.192/26"
+    availability_zone = "us-west-2d"
 
     tags = {
-        Name = "NATGateway"
+        Name = "public"
     }
 }
