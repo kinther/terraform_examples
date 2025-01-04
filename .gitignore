@@ -2,3 +2,4 @@ aws/.terraform*
 aws/terraform*
 azure/.terraform*
 azure/terraform*
+2021_study/*
