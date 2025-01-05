@@ -3,3 +3,5 @@ aws/terraform*
 azure/.terraform*
 azure/terraform*
 2021_study/*
+*/terraform.tfstate*
+*/.terraform*
